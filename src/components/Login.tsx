@@ -1,16 +1,21 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import { Eye, EyeOff } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import clsx from 'clsx';
 
-export function Login() {
+import type { Role } from '../types';
+
+interface LoginProps {
+  onLogin: (role: Role) => void;
+}
+
+export function Login({ onLogin }: LoginProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
   const validateEmail = () => {
     if (!email) {
@@ -37,7 +42,11 @@ export function Login() {
     // Simulate API delay
     setTimeout(() => {
       setLoading(false);
-      navigate('/dashboard');
+      let role: Role = 'Admin'; // Default fallback
+      if (email === 'dispatch@transitops.com') role = 'Dispatcher';
+      if (email === 'driver@transitops.com') role = 'Driver';
+      if (email === 'admin@transitops.com') role = 'Admin';
+      onLogin(role);
     }, 600);
   };
 

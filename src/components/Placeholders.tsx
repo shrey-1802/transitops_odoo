@@ -20,8 +20,6 @@ const PagePlaceholder = ({ title, part }: { title: string, part: number }) => (
   </div>
 );
 
-export const Dashboard = () => <PagePlaceholder title="Main Dashboard" part={2} />;
-export const Vehicles = () => <PagePlaceholder title="Vehicle Registry" part={2} />;
 export const Drivers = () => <PagePlaceholder title="Driver Management" part={3} />;
 export const Trips = () => <PagePlaceholder title="Trip Management & Dispatch" part={3} />;
 export const Maintenance = () => <PagePlaceholder title="Maintenance" part={4} />;
