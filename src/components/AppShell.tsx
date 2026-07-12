@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Outlet, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import { 
   LayoutDashboard, 
@@ -22,6 +22,7 @@ import type { Role, RouteKey } from '../types';
 interface AppShellProps {
   currentRole: Role;
   onRoleChange: (role: Role) => void;
+  onLogout: () => void;
 }
 
 const NAV_ITEMS: { key: RouteKey; label: string; path: string; icon: React.ElementType }[] = [
@@ -34,11 +35,10 @@ const NAV_ITEMS: { key: RouteKey; label: string; path: string; icon: React.Eleme
   { key: 'reports', label: 'Reports & Analytics', path: '/reports', icon: BarChart3 },
 ];
 
-export function AppShell({ currentRole, onRoleChange }: AppShellProps) {
+export function AppShell({ currentRole, onRoleChange, onLogout }: AppShellProps) {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
 
   // Close mobile drawer on route change
   useEffect(() => {
@@ -53,7 +53,7 @@ export function AppShell({ currentRole, onRoleChange }: AppShellProps) {
   const headerTitle = currentNavItem ? currentNavItem.label : 'TransitOps';
 
   const handleLogout = () => {
-    navigate('/login');
+    onLogout();
   };
 
   return (

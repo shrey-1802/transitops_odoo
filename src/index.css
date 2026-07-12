@@ -3,6 +3,7 @@
 :root {
   /* Light Theme */
   --bg-canvas: #f9f9f8;
+  --bg-body: #f4f4f2;
   --bg-surface: #ffffff;
   --bg-surface-hover: #f1f1ef;
   --bg-sidebar: #ffffff;
@@ -23,6 +24,7 @@
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
+  --radius-xl: 16px;
   
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
@@ -35,6 +37,7 @@
 .dark-mode {
   /* Dark Theme */
   --bg-canvas: #121310;
+  --bg-body: #0d0e0c;
   --bg-surface: #1e1f1b;
   --bg-surface-hover: #2d2e29;
   --bg-sidebar: #1a1c18;

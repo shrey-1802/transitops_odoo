@@ -20,6 +20,11 @@ function App() {
     navigate('/dashboard');
   };
 
+  const handleLogout = () => {
+    setUserRole(null);
+    navigate('/login');
+  };
+
   // Protected Route Wrapper
   const ProtectedRoute = ({ children, routeKey }: { children: React.ReactNode, routeKey: RouteKey }) => {
     if (!userRole) {
@@ -41,7 +46,7 @@ function App() {
       
       <Route element={
         userRole ? (
-          <AppShell currentRole={userRole} onRoleChange={setUserRole} />
+          <AppShell currentRole={userRole} onRoleChange={setUserRole} onLogout={handleLogout} />
         ) : (
           <Navigate to="/login" replace />
         )
