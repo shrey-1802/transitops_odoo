@@ -12,9 +12,10 @@ interface LoginProps {
 
 // Mock user credentials
 const MOCK_USERS: { email: string; password: string; role: Role }[] = [
-  { email: 'admin@transitops.com',    password: 'Admin@123',    role: 'Admin' },
+  { email: 'admin@transitops.com',    password: 'Admin@123',    role: 'Fleet Manager' },
   { email: 'dispatch@transitops.com', password: 'Dispatch@123', role: 'Dispatcher' },
-  { email: 'driver@transitops.com',   password: 'Driver@123',   role: 'Driver' },
+  { email: 'driver@transitops.com',   password: 'Driver@123',   role: 'Safety Officer' },
+  { email: 'finance@transitops.com',  password: 'Finance@123',  role: 'Financial Analyst' },
 ];
 
 export function Login({ onLogin }: LoginProps) {

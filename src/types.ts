@@ -1,11 +1,19 @@
-export type Role = 'Admin' | 'Dispatcher' | 'Driver';
+export type Role = 'Fleet Manager' | 'Dispatcher' | 'Safety Officer' | 'Financial Analyst';
 
 export type RouteKey = 'dashboard' | 'vehicles' | 'drivers' | 'trips' | 'maintenance' | 'expenses' | 'reports';
 
 export const ROLE_NAV: Record<Role, RouteKey[]> = {
-  Admin: ['dashboard', 'vehicles', 'drivers', 'trips', 'maintenance', 'expenses', 'reports'],
-  Dispatcher: ['dashboard', 'vehicles', 'drivers', 'trips'],
-  Driver: ['dashboard', 'trips', 'maintenance']
+  'Fleet Manager':     ['dashboard', 'vehicles', 'maintenance', 'reports'],
+  'Dispatcher':        ['dashboard', 'vehicles', 'drivers', 'trips'],
+  'Safety Officer':    ['dashboard', 'drivers'],
+  'Financial Analyst': ['dashboard', 'expenses', 'reports'],
+};
+
+export const ROLE_RESTRICTIONS: Record<Role, string[]> = {
+  'Fleet Manager':     ['Manage Finance', 'Create Expenses'],
+  'Dispatcher':        ['Delete Vehicles', 'Access Reports'],
+  'Safety Officer':    ['Create Expenses', 'Manage Vehicles', 'Dispatch Trips'],
+  'Financial Analyst': ['Dispatch Trips', 'Manage Vehicles', 'Manage Drivers'],
 };
 
 export interface Vehicle {

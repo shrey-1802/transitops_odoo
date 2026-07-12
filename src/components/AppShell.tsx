@@ -108,7 +108,7 @@ export function AppShell({ currentRole, onRoleChange, onLogout }: AppShellProps)
           </select>
           
           <div className={clsx('mt-2 text-sm text-secondary', isSidebarCollapsed ? 'hidden' : 'block')}>
-            <div style={{ fontWeight: 500, fontSize: '0.875rem' }}>Admin User</div>
+            <div style={{ fontWeight: 500, fontSize: '0.875rem' }}>{currentRole} User</div>
             <div style={{ fontSize: '0.75rem', color: 'var(--text-disabled)' }}>{currentRole}</div>
           </div>
         </div>
