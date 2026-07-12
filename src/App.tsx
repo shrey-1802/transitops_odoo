@@ -5,7 +5,10 @@ import { Login } from './components/Login';
 import { Unauthorized } from './components/Unauthorized';
 import { Dashboard } from './components/Dashboard';
 import { Vehicles } from './components/Vehicles';
-import { Drivers, Trips, Maintenance, Expenses, Reports } from './components/Placeholders';
+import { Analytics } from './components/Analytics';
+import { Expenses } from './components/Expenses';
+import { Maintenance } from './components/Maintenance';
+import { Drivers, Trips, Reports } from './components/Placeholders';
 import type { Role, RouteKey } from './types';
 import { ROLE_NAV } from './types';
 import './App.css';
@@ -57,6 +60,7 @@ function App() {
         <Route path="/trips" element={<ProtectedRoute routeKey="trips"><Trips /></ProtectedRoute>} />
         <Route path="/maintenance" element={<ProtectedRoute routeKey="maintenance"><Maintenance /></ProtectedRoute>} />
         <Route path="/expenses" element={<ProtectedRoute routeKey="expenses"><Expenses /></ProtectedRoute>} />
+        <Route path="/analytics" element={<ProtectedRoute routeKey="analytics"><Analytics /></ProtectedRoute>} />
         <Route path="/reports" element={<ProtectedRoute routeKey="reports"><Reports /></ProtectedRoute>} />
       </Route>
       
