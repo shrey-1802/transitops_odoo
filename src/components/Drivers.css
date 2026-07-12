@@ -1,0 +1,46 @@
+/* src/components/Drivers.css */
+.drivers-page {
+  padding: 24px;
+}
+.page-title {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.search-input,
+.status-filter {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+.driver-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: hsl(120,30%,30%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.expiry-badge {
+  margin-left: 6px;
+}
+.empty-state {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+}

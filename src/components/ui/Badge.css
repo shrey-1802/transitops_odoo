@@ -1,0 +1,20 @@
+/* Badge variants for premium TransitOps UI */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Solid colors */
+.badge-olive { background: hsl(120, 30%, 30%); color: white; }
+.badge-beige { background: hsl(45, 30%, 85%); color: #333; }
+.badge-olive-muted { background: hsl(120, 10%, 55%); color: white; }
+.badge-beige-amber { background: hsl(38, 30%, 80%); color: #332b00; }
+.badge-olive-brown { background: hsl(30, 15%, 45%); color: white; }
+
+/* Outline variants */
+.badge-outline-olive { border: 1px solid hsl(120, 30%, 30%); color: hsl(120, 30%, 30%); background: transparent; }
+.badge-outline-beige { border: 1px solid hsl(45, 30%, 85%); color: hsl(45, 30%, 85%); background: transparent; }

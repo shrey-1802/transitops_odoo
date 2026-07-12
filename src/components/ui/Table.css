@@ -1,0 +1,27 @@
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.ui-table th,
+.ui-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ui-table th {
+  background-color: var(--bg-surface);
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-table tr:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+.ui-table-row td {
+  transition: background-color var(--transition-fast);
+}

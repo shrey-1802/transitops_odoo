@@ -1,0 +1,23 @@
+/* SafetyScoreBar placeholder styling */
+.safety-score-bar {
+  background: #f0f0f0;
+  border-radius: 4px;
+  position: relative;
+  height: 1rem;
+  overflow: hidden;
+}
+.safety-score-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+.safety-olive { background-color: #708238; }
+.safety-beige-amber { background-color: #c6b38e; }
+.safety-beige { background-color: #ded5b5; }
+.safety-score-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: #333;
+}

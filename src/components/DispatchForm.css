@@ -1,0 +1,26 @@
+/* DispatchForm component styling */
+.dispatch-form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dispatch-form {
+  background: var(--bg-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  max-width: 500px;
+  width: 100%;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+.cancel-btn { background: #eee; border: none; padding: .5rem 1rem; }
+.submit-btn { background: #708238; color: #fff; border: none; padding: .5rem 1rem; }
+.warning-msg { color: #b33; margin-top: .5rem; }
+.success-msg { color: #393; margin-top: .5rem; }
