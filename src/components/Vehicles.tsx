@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Search, MoreVertical, Filter, ArrowUpDown, Plus, X, UploadCloud, FileText, Car } from 'lucide-react';
 import type { Vehicle } from '../types';
 import { mockVehicles } from '../mocks/vehicles';
@@ -18,7 +18,7 @@ function VehicleSlideOut({ isOpen, onClose, vehicle, onSave }: SlideOutProps) {
   const [isDragging, setIsDragging] = useState(false);
 
   // Sync form data when vehicle prop changes
-  useMemo(() => {
+  useEffect(() => {
     if (isOpen) {
       setFormData(vehicle || {
         registrationNumber: '', model: '', type: 'Van', 
